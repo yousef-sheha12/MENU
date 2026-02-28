@@ -1,60 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-*{
-    /* margin:0; */
-    padding:0;
-    /* border:none; */
-    outline:none;
-    box-sizing:border-box;
-} 
-body{  
-        width: 100%;
-        height:100%;
-        display: flex; 
-        justify-content: center;
-        align-items: center;  
-        height: 100vh;  
-        /* margin: 0;   */
-        flex-wrap: wrap; 
-        color: white; 
-        background: black center no-repeat; 
-        font-family: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-h1{
-position: absolute;
-top: 0;
-right: 45%;
-color: rgb(21, 213, 130);
+body {
+  background: #0f0f0f; /* لون أسود فاخر */
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-.jo{
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(2,1fr);
-    width: 100vh;
-   align-items: center;
-   margin: 50px;
-   height: 100vh;
-  color:rgb(232, 220, 220);
-
-    
-}
-h3{
-    border-bottom: 10px rgb(9, 28, 97) solid;
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-top: 20px;
 }
 
-p{
-    border: 1px solid rgb(72, 69, 69);
-    padding: 12px;
-    position: relative;
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
-span{display:flex;
-    justify-content: end;
-    align-items: center;
-    font-weight: 600;
-    position: absolute;
-    bottom: 30%;
-    left: 85%;
+header h1 span {
+  color: #15d582; /* اللون الأخضر المميز */
+}
 
+header .subtitle {
+  color: #888;
+  font-style: italic;
+}
+
+/* حاوية المنيو - Responsive Grid */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-category {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 15px;
+  border-bottom: 4px solid #15d582;
+  transition: transform 0.3s ease;
+}
+
+.menu-category:hover {
+  transform: translateY(-5px); /* تأثير خفيف عند تمرير الماوس */
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #15d582;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  border-bottom: 1px dashed #333;
+}
+
+.menu-item p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #fff;
+  background: #15d582;
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: #000;
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .menu-container {
+    grid-template-columns: 1fr; /* عمود واحد للموبايل */
+  }
 }
